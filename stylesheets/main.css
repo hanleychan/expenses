@@ -41,6 +41,12 @@ header {
     background-color: #0099ff;
 }
 
+footer p {
+ text-align: center;
+}
+
+
+
 p#dataInputError {
     color: red;
 }
