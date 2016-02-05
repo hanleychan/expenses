@@ -1,0 +1,16 @@
+{
+    "name": "men_o/money",
+    "authors": [
+        {
+            "name": "Hanley Chan",
+            "email": "hanleychan@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "": "includes/"
+        }
+    }
+}

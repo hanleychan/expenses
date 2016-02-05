@@ -1,0 +1,318 @@
+body {
+    background-color: #eeeeee;
+    min-width: 380px;
+}
+
+a {
+    text-decoration: none;
+    color: #0000ff;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+p#message {
+    color: green;
+}
+
+#wrapper {
+    margin: 2% auto;
+    padding-bottom: 2%;
+    min-width: 380px;
+    max-width: 940px;
+    background-color: white;
+    border: solid 1px black;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding: 2%;
+}
+
+input.descError, input.amountError, select.typeError  {
+    color: red;
+}
+
+
+header {
+    width: 100%;
+    background-color: #0099ff;
+}
+
+p#dataInputError {
+    color: red;
+}
+
+#mainContent, #datePicker, #subViewSelector {
+    margin: 0 2.5%;
+}
+
+#mainHeading {
+    margin: 2.5% 2.5%;
+    white-space: nowrap;
+}
+
+/**
+ * Navigation
+ */
+nav#topNavigation {
+    text-align: center;
+}
+
+ul#mainNavigation, ul#subNavigation {
+    margin: 0;
+    padding: 0;
+}
+
+ul#mainNavigation {
+    background-color: #339933;
+}
+
+ul#subNavigation {
+    background-color: #00cc00;
+}
+
+ul#subViewNavigation {
+    margin-left: 0;
+    padding-left : 0;
+    width: 100%;
+}
+
+
+nav li {
+    display: inline-block;
+    min-width: 80px; 
+}
+
+nav a {
+    font-weight: bold;
+    color: blue;
+    display: block;
+}
+
+ul#mainNavigation {
+    font-size: 1.2em;
+}
+
+ul#subNavigation {
+    font-size: 1em;
+}
+
+ul#mainNavigation, ul#subNavigation {
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+nav a:hover {
+    color: red;
+}
+
+
+li#subViewHeading {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+label#datePickerHeading {
+    font-weight: bold;
+}
+
+.selectedSubView {
+    text-decoration: underline;    
+}
+
+#selectedPage {
+    background-color: yellow;
+}
+
+#selectedSubPage {
+    background-color: orange;
+}
+
+/**
+ * Income/Expense input form
+ */
+
+input.desc {
+    width: 35%;
+    font-size: 0.8em;
+}
+
+select.type {
+    width: 25%;
+    font-size: 0.8em;
+}
+
+input.amount {
+    width: 25%;
+    font-size: 0.8em;
+}
+
+button.deleteButton {
+    padding:0;
+    font-size: 0.8em;
+    max-width: 10%;
+}
+
+label.descLabel {
+    width: 35%;
+    display: inline-block; 
+}
+
+label.typeLabel {
+    width: 25%;
+    display: inline-block;
+    padding-left: 0.5%;
+}
+
+label.amountLabel {
+    width: 25%;
+    display: inline-block;
+}
+
+#mainContent {
+    overflow: hidden;
+}
+
+
+#mainContentRight {
+    display: none;
+}
+
+.incomeEntry, .expenseEntry {
+    margin-bottom: 0.5%;
+}
+
+#formControlButtons {
+    float: right;
+    margin-right: 6%;
+}
+
+#incomeExpensesForm {
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+table, th, td  {
+    border: 1px solid black;
+}
+
+table {
+    table-layout: fixed;
+    width: 95%;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+section#login, section#register, section#about, section#output, section#wishlist, section#tools, section#changePassword {
+    margin: 2%;
+}
+
+/**
+ * Wishlist
+ */
+
+ul#wishlistItems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#wishlistItems li {
+    margin-top:10px;
+}
+
+span#addedHeading, span.added {
+    display: inline-block;
+    width: 7%;
+    word-wrap: break-word;
+}
+
+span#itemHeading, span.item {
+    display: inline-block;
+    width: 30%;
+    word-wrap: break-word;
+}
+
+span#priceHeading, span.price {
+    display: inline-block;
+    width: 25%;
+    word-wrap: break-word;
+    padding-left: 2%;
+}
+
+span#groupHeading, span.group {
+    display: inline-block;
+    word-wrap: break-word;
+    padding-left: 2%;
+    width: 25%;
+}
+
+span#itemHeading, span#priceHeading, span#groupHeading, span#addedHeading {
+    font-weight: bold;
+}
+
+#wishlistItemsSort, #wishlistItemsControl {
+    padding: 0;
+    margin: 1% 0;
+}
+
+#wishlistItemsSort li, #wishlistItemsControl li {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+nav p a {
+    display: inline;
+}
+
+label#itemLabel, label#priceLabel, label#groupLabel {
+    display: inline-block;
+    width: 50px;
+    padding-bottom: 10px;
+}
+
+input#groupName {
+    margin-bottom: 10px;
+}
+
+.itemError, .groupError {
+    color: red;
+}
+
+span.item a {
+    display: block;
+}
+span.item a:hover {
+    background-color: yellow;
+}
+
+
+form#expensesPlannerForm label {
+    display: inline-block;
+    width: 30%;
+}
+
+form#expensesPlannerForm input[type="number"] {
+    min-width: 20%;
+    max-width: 30%;
+}
+
+#expensesInput {
+    width: 100%;
+}
+
+form#loginForm input[type="submit"], form#registerForm input[type="submit"], form#changePasswordForm input[type="submit"] {
+    margin-top: 2%;
+}
+
+ul#toolsList li {
+    list-style-type: none;
+}
+

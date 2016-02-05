@@ -1,0 +1,110 @@
+@media screen and (min-width: 650px) {
+    #wrapper {
+        overflow: auto;
+    }
+    #expensesInput, #incomeInput {
+        float: left;
+        width: 55%;
+    }
+
+    #results {
+        margin-left: 20px;
+        position: absolute;
+        left: 55%;
+        top: auto;
+    }
+
+
+    #return {
+        padding-top: 2%;
+        clear: both;
+    }
+
+}
+@media screen and (min-width: 940px) {
+    form {
+        margin:0; padding:0; }
+
+    #datePicker {
+        display: none;
+    }
+
+    #mainContentLeft {
+        width: 70%;
+        float: left;
+        overflow: hidden;
+    }
+
+    #mainContentRight {
+        float: right;
+        width: 29.5%;
+        display: block;
+        border: solid 1px black;
+        margin-top: 3%;
+    }
+
+    #weekdays, #days {
+        margin: 2% 0;
+        padding: 0;
+    }
+
+    #calendar {
+        text-align: center;
+    }
+
+    #calendar ul {
+        margin: 5px 0 0 0;
+        padding: 0;
+    }
+    
+    #calendar ul li {
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 0 10px 0;
+    }
+
+    ul#weekdays li, ul#days li {
+        width: 12%;
+    }
+
+    ul#months li, ul#years li {
+        width: 30%;
+    }
+
+    li#currentDay, li#currentMonth, li#currentYear {
+        background-color: yellow;
+    }
+
+
+    #calendar ul li a {
+        color: blue;
+        display: block;
+    }
+
+    #calendar ul li a:hover {
+        color: red;
+    }
+    
+
+    ul.weekdays {
+        font-weight: bold;
+    }
+
+    #prevCalendar {
+        float: left;
+        margin-left: 4%;
+    }
+
+    #nextCalendar {
+        float: right;
+        margin-right: 4%;
+    }
+
+
+    #calendarHeading {
+        border-bottom: solid 1px black;
+        padding: 5%;
+        margin: 0;
+    }
+}
+
