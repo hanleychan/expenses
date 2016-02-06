@@ -17,7 +17,7 @@ function getIncomeEntries() {
 
     do {
         $result .= '<div class="incomeEntry"> ';
-
+        $result .= '<label for="incomeDesc' . $incomeIndex . '" class="altDescLabel">Description: </label>';
         $result .= '<input type="text" id="incomeDesc' . $incomeIndex . '" name="incomeDesc' . $incomeIndex . '" class="desc';
         if($inputErrors && isset($incomeEntries[$incomeIndex])) {
             if($incomeEntries[$incomeIndex]["descError"]) {
@@ -38,7 +38,7 @@ function getIncomeEntries() {
         }
 
         $result .= '> ';
-
+        $result .= '<label for="incomeType' . $incomeIndex . '" class="altTypeLabel">Category: </label>';
         $result .= '<select id="incomeType' . $incomeIndex . '" name="incomeType' . $incomeIndex . '" class="type';
         if($inputErrors && isset($incomeEntries[$incomeIndex])) {
             if($incomeEntries[$incomeIndex]["typeError"]) {
@@ -65,7 +65,8 @@ function getIncomeEntries() {
             $result .= '</option> ';
         }
         $result .= '</select> ';
-
+        
+        $result .= '<label for="incomeAmount' . $incomeIndex . '" class="altAmountLabel">Amount: </label>';             
         $result .= '<input type="text" maxlength="20" id="incomeAmount' . $incomeIndex . '" name="incomeAmount' . $incomeIndex . '" class="amount';
         if($inputErrors && isset($incomeEntries[$incomeIndex])) {
             if($incomeEntries[$incomeIndex]["amountError"]) {
@@ -84,7 +85,7 @@ function getIncomeEntries() {
             $result .= '"';
         }
         $result .= '> ';
-
+        $result .= '<label class="removeLabel">Remove: </label>';
         $result .= '<button type="button" id="deleteIncomeButton' . $incomeIndex . '" name="deleteIncomeButton' . $incomeIndex . '" class="deleteButton" title="Delete"> ';
         $result .= '&#10006;';
         $result .= '</button> ';
@@ -113,7 +114,7 @@ function getExpenseEntries() {
 
     do {
         $result .= '<div class="expenseEntry"> ';
-
+        $result .= '<label for="expenseDesc' . $expenseIndex . '" class="altDescLabel">Description: </label>';
         $result .= '<input type="text" id="expenseDesc' . $expenseIndex . '" name="expenseDesc' . $expenseIndex . '" class="desc';
         if($inputErrors && isset($expenseEntries[$expenseIndex])) {
             if($expenseEntries[$expenseIndex]["descError"]) {
@@ -134,7 +135,7 @@ function getExpenseEntries() {
         }
 
         $result .= '> ';
-
+        $result .= '<label for="expenseType' . $expenseIndex . '" class="altTypeLabel">Category: </label>';
         $result .= '<select id="expenseType' . $expenseIndex . '" name="expenseType' . $expenseIndex . '" class="type';
         if($inputErrors && isset($expenseEntries[$expenseIndex])) {
             if($expenseEntries[$expenseIndex]["typeError"]) {
@@ -162,6 +163,7 @@ function getExpenseEntries() {
         }
         $result .= '</select> ';
 
+        $result .= '<label for="expenseAmount' . $expenseIndex . '" class="altAmountLabel">Amount: </label>';             
         $result .= '<input type="text" maxlength="20" id="expenseAmount' . $expenseIndex . '" name="expenseAmount' . $expenseIndex . '" class="amount';
         if($inputErrors && isset($expenseEntries[$expenseIndex])) {
             if($expenseEntries[$expenseIndex]["amountError"]) {
@@ -180,7 +182,8 @@ function getExpenseEntries() {
             $result .= '"';
         }
         $result .= '> ';
-
+        
+        $result .= '<label class="removeLabel">Remove: </label>';
         $result .= '<button type="button" id="deleteExpenseButton' . $expenseIndex . '" name="deleteExpenseButton' . $expenseIndex . '" class="deleteButton" title="Delete"> ';
         $result .= '&#10006;';
         $result .= '</button> ';
@@ -211,14 +214,18 @@ function getExpenseEntries() {
         ?>
         <h3>Income:</h3>
         <div id="incomeEntries">
-            <label class="descLabel">Description</label> <label class="typeLabel">Category</label> <label class="amountLabel">Amount</label>
+            <div id="incomeHeadings">
+                <label class="descLabel">Description</label> <label class="typeLabel">Category</label> <label class="amountLabel">Amount</label>
+            </div>
             <?php echo getIncomeEntries(); ?>
         </div>
         <button type ="button" id="addIncomeFieldButton">+ Add Another</button><br>
         
         <h3>Expenses:</h3>
         <div id="expenseEntries">
-            <label class="descLabel">Description</label> <label class="typeLabel">Category</label> <label class="amountLabel">Amount</label>
+            <div id="expenseHeadings">
+                <label class="descLabel">Description</label> <label class="typeLabel">Category</label> <label class="amountLabel">Amount</label>
+            </div>
             <?php echo getExpenseEntries(); ?>
         </div>    
         <button type = "button" id="addExpenseFieldButton">+ Add another</button><br>

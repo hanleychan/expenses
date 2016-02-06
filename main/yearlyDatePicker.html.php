@@ -1,5 +1,5 @@
     <form action="./" method="GET">
-        <label>Date selector</label>
+        <label id="datePickerHeading">Date: </label>
         <select id="yearPicker" name="year" class="yearlyDatePicker">
             <?php 
                 $years = getYearsArray();

@@ -74,6 +74,10 @@ function createEntry(entryType) {
         return false;
     }
     else {
+        var altDescLabel = document.createElement("label");
+        var altTypeLabel = document.createElement("label");
+        var altAmountLabel = document.createElement("label");
+        var removeLabel = document.createElement("label");
         var div = document.createElement("div");
         var desc = document.createElement("input");
         var type = document.createElement("select");
@@ -81,6 +85,14 @@ function createEntry(entryType) {
         var deleteButton = document.createElement("button");
         var entryHolderName;
         
+        altDescLabel.innerHTML = "Description: ";
+        altDescLabel.classList.add("altDescLabel");
+        altTypeLabel.innerHTML = "Category: ";
+        altTypeLabel.classList.add("altTypeLabel");
+        altAmountLabel.innerHTML = "Amount: ";
+        altAmountLabel.classList.add("altAmountLabel");
+        removeLabel.innerHTML = "Remove: ";
+        removeLabel.classList.add("removeLabel");
         desc.setAttribute("type", "text");
         desc.setAttribute("placeholder", "Description");
         desc.setAttribute("maxlength", MAX_DESC_LENGTH);
@@ -116,12 +128,16 @@ function createEntry(entryType) {
             expenseFieldCounter++;
         }
 
+        div.appendChild(altDescLabel);
         div.appendChild(desc);
         div.appendChild(document.createTextNode(" "));
+        div.appendChild(altTypeLabel);
         div.appendChild(type);
         div.appendChild(document.createTextNode(" "));
+        div.appendChild(altAmountLabel);
         div.appendChild(amount);
         div.appendChild(document.createTextNode(" "));
+        div.appendChild(removeLabel);
         div.appendChild(deleteButton);
         div.appendChild(document.createElement("br"));
 
@@ -202,26 +218,35 @@ function reorderEntryIds(entriesType) {
         var amount;
         var deleteButton;
 
+        altDescLabel = entriesToReorder[ii].querySelector("label.altDescLabel");
+        altTypeLabel = entriesToReorder[ii].querySelector("label.altTypeLabel");
+        altAmountLabel = entriesToReorder[ii].querySelector("label.altAmountLabel");
         desc = entriesToReorder[ii].querySelector("input.desc");     
         type = entriesToReorder[ii].querySelector("select.type");
         amount = entriesToReorder[ii].querySelector("input.amount");
         deleteButton = entriesToReorder[ii].querySelector("button.deleteButton");
 
         if(entriesType === "income") {
+            altDescLabel.setAttribute("for", "incomeDesc"+ii);
             desc.setAttribute("id", "incomeDesc"+ii);
             desc.setAttribute("name", "incomeDesc"+ii);
+            altTypeLabel.setAttribute("for", "incomeType"+ii);
             type.setAttribute("id", "incomeType"+ii);
             type.setAttribute("name", "incomeType"+ii);
+            altAmountLabel.setAttribute("for", "incomeAmount"+ii);
             amount.setAttribute("id","incomeAmount"+ii);
             amount.setAttribute("name","incomeAmount"+ii);
             deleteButton.setAttribute("id","deleteIncomeButton"+ii);
             deleteButton.setAttribute("name","deleteIncomeButton"+ii);
         }
         if(entriesType === "expenses") {
+            altDescLabel.setAttribute("for", "expenseDesc"+ii);
             desc.setAttribute("id","expenseDesc"+ii);
             desc.setAttribute("name","expenseDesc"+ii);
+            altTypeLabel.setAttribute("for", "expenseType"+ii);
             type.setAttribute("id","expenseType"+ii);
             type.setAttribute("name","expenseType"+ii);
+            altAmountLabel.setAttribute("for", "expenseAmount"+ii);
             amount.setAttribute("id","expenseAmount"+ii);
             amount.setAttribute("name","expenseAmount"+ii);
             deleteButton.setAttribute("id","deleteExpenseButton"+ii);

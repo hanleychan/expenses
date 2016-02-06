@@ -1,5 +1,5 @@
     <form action="./" method="GET">
-        <label>Date selector:</label>
+        <label id="datePickerHeading">Date:</label>
         <input type="hidden" name="view" value="monthly">
         <select id="monthPicker" name="month" class="monthlyDatePicker">
             <?php
