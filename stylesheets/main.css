@@ -58,6 +58,10 @@ p#dataInputError {
     margin: 0 2.5%;
 }
 
+#datePickForm {
+    font-size: 0.8em;
+}
+
 #mainHeading {
     margin: 2.5% 2.5%;
     white-space: nowrap;
@@ -224,11 +228,20 @@ table, th, td  {
 
 table {
     table-layout: fixed;
+    width: 100%;
+}
+
+#totalSummaryTable, #incomeSummaryTable, #expensesSummaryTable {
     width: 95%;
 }
 
 td {
     word-wrap: break-word;
+    font-size: 0.8em;
+}
+
+th {
+    font-size: 0.8em;
 }
 
 section#login, section#register, section#about, section#output, section#wishlist, section#tools, section#changePassword {
@@ -317,12 +330,12 @@ span.item a:hover {
 
 form#expensesPlannerForm label {
     display: inline-block;
-    width: 30%;
+    width: 40%;
 }
 
-form#expensesPlannerForm input[type="number"] {
-    min-width: 20%;
-    max-width: 30%;
+form#expensesPlannerForm input[type="text"] {
+    display: inline-block;
+    width: 40%;
 }
 
 #expensesInput {

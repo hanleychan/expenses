@@ -47,6 +47,22 @@
         font-size: 1.5em;
     }
 
+    table {
+        width: 95%;
+    }
+
+    th {
+        font-size: 1em;
+    }
+
+    td {
+        font-size: 1em;
+    }
+
+    #datePickForm {
+        font-size: 1em;
+    }
+
 }
 
 @media screen and (min-width: 650px) {

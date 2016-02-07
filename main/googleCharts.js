@@ -17,7 +17,7 @@ function drawTotalChart() {
     var options = {
         sliceVisibilityThreshold: 0,
         title: totalTitle,
-        chartArea: {left:30, top: 30}
+        chartArea: {left:30, top: 30, width: "80%", height: "70%"}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('totalChart'));
@@ -38,7 +38,7 @@ function drawIncomeChart() {
     var options = {
       sliceVisibilityThreshold: 0,
       title: incomeTitle,
-      chartArea: {left:30, top: 30}
+      chartArea: {left:30, top: 30, width: "80%", height: "70%"}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('incomeChart'));
@@ -60,7 +60,7 @@ function drawExpensesChart() {
     var options = {
       sliceVisibilityThreshold: 0,
       title: expensesTitle,
-      chartArea: {left:30, top: 30}
+      chartArea: {left:30, top: 30, width: "80%", height: "70%"}
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('expensesChart'));
@@ -68,3 +68,13 @@ function drawExpensesChart() {
     chart.draw(data, options);
 }
 
+/**
+ * Redraw the charts when the browser is resized
+ */
+function resize() {
+    drawTotalChart();
+    drawIncomeChart();
+    drawExpensesChart();
+}
+
+window.onresize = resize;
