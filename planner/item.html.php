@@ -1,13 +1,25 @@
 <?php
-function generateGroupOptions() {
+function generateGroupOptions($itemGroupID) {
     global $wishlistGroups;
+    
     $output = "";
     foreach($wishlistGroups as $wishlistGroup) {
         if($wishlistGroup->groupName !== "General") {
-            $output .= '<option value="' . htmlentities($wishlistGroup->id) . '">' . htmlentities($wishlistGroup->groupName) . '</option>';
+            $output .= '<option value="' . htmlentities($wishlistGroup->id) . '"';
+            
+            if($itemGroupID === $wishlistGroup->id) {
+                $output .= ' selected';
+            }
+             
+            $output .= '>' . htmlentities($wishlistGroup->groupName) . '</option>';
         }
         else {
-            $output = '<option value=' . htmlentities($wishlistGroup->id) . '">' . htmlentities($wishlistGroup->groupName) . '</option>' . $output;
+            $tempOutput = '<option value=' . htmlentities($wishlistGroup->id) . '"';
+            if($itemGroupID === $wishlistGroup->id || $itemGroupID === "") {
+                $tempOutput .= ' selected';
+            }
+            $tempOutput .= '>' . htmlentities($wishlistGroup->groupName) . '</option>';
+            $output = $tempOutput . $output;
         }
     }
     return $output;
@@ -60,6 +72,16 @@ function generateGroupOptions() {
                     else {
                         $itemPriceValue = "";
                     }
+                    
+                    if(isset($itemError) && isset($_POST["itemGroup"])) {
+                        $itemGroupValue = htmlentities($_POST["itemGroup"]);
+                    }
+                    else if(isset($wishlistItem) && isset($_GET["item"])) {
+                        $itemGroupValue = htmlentities($wishlistItem->groupID);
+                    }
+                    else {
+                        $itemGroupValue = "";
+                    }
                 ?>
 
                 <label for="item" id="itemLabel">Item:</label>
@@ -71,7 +93,7 @@ function generateGroupOptions() {
                 <label for="itemGroup" id="groupLabel">Group:</label>
                 <select id="itemGroup" name="itemGroup"<?php if(isset($itemGroupError)) echo ' class="itemError"'; ?>>
                     <?php
-                        echo generateGroupOptions();
+                        echo generateGroupOptions($itemGroupValue);
                     ?>
                 </select><br>
 

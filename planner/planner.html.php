@@ -20,10 +20,7 @@ require_once(ROOT_PATH . "includes/layouts/header.php");
             }
         }
         else if($view === "tools") {
-            if(isset($_GET["budgetCalculator"])) {
-                require_once("budgetCalculator.html.php");
-            }
-            else if(isset($_GET["expensesPlanner"])) {
+            if(isset($_GET["expensesPlanner"])) {
                 $expensePlanner = true;
                 require_once("expensesPlanner.html.php");
             }
