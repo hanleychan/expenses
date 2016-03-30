@@ -3,6 +3,7 @@
     <head>
         <title>Expenses Manager</title>
         <meta charset="utf-8">
+        <link rel="icon" href="<?php echo BASE_URL . "images/favicon.ico" ?>">
         <link rel="stylesheet" href="<?php echo BASE_URL . "stylesheets/normalize.css" ?>">
         <link rel="stylesheet" href="<?php echo BASE_URL . "stylesheets/main.css" ?>">
         <link rel="stylesheet" href="<?php echo BASE_URL . "stylesheets/responsive.css" ?>">
