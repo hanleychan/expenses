@@ -51,7 +51,7 @@
                         }
                         else if($page === "settings") {
                     ?>
-                        <li<?php if($view === "changePassword") echo ' id="selectedSubPage"'; ?>><a href="<?php echo BASE_URL . "settings/?view=changePassword"; ?>">Change Password</a></li>
+                        <li<?php if($view === "changePassword") echo ' id="selectedSubPage"'; ?>><a href="<?php echo BASE_URL . "settings/?view=changePassword"; ?>">Password</a></li>
                     <?php
                         }
                     ?>

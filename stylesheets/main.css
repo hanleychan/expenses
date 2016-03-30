@@ -238,6 +238,7 @@ table {
 td {
     word-wrap: break-word;
     font-size: 0.8em;
+    padding-left: 5px;
 }
 
 th {
@@ -344,6 +345,10 @@ form#expensesPlannerForm input[type="text"] {
 
 form#loginForm input[type="submit"], form#registerForm input[type="submit"], form#changePasswordForm input[type="submit"] {
     margin-top: 2%;
+}
+
+form#changePasswordForm input {
+    margin-bottom: 1%;
 }
 
 ul#toolsList li {

@@ -76,5 +76,5 @@ class MySQLDatabase {
     }
 }
 
-$db = new mySQLDatabase();
+$db = new MySQLDatabase();
 ?>
