@@ -1,5 +1,11 @@
 # expenses
 
-This is a web application to handle expenses written in PHP.
+This is a web application for handling expenses written in PHP.  
 
-URL: http://www.hanleyc.com/money
+Features:
+Add daily income and expenses data by categories
+View income and expenses data by day, month, year or all.
+Wishlist 
+Monthly Expenses Planner
+
+Application Link: http://expenses.hanleyc.com
