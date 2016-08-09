@@ -89,6 +89,9 @@
 
 }
 @media screen and (min-width: 940px) {
+    #wrapper {
+        max-width: 1200px;
+    }
     form {
         margin:0; padding:0; }
 
